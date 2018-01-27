@@ -70,9 +70,36 @@ body
 		background #f7f7f7
 		&>.w
 			overflow hidden
+		.swiper-container
+			width 660px
+			.swiper-slide
+				position relative
+				.text
+					position absolute
+					bottom 0
+					left 0
+					right 0
+					font-size 14px
+					color #fff
+					line-height 30px
+					padding-left 20px
+					background rgba(0,0,0,0.5)
+			.swiper-pagination
+				right 10px
+				bottom 11px
+				font-size 0
+				left auto
+				width auto
+				text-align right
+				span
+					opacity 1
+					background #fff
+					&.swiper-pagination-bullet-active
+						background #0068b7
 		.box-shadow
 			box-shadow 2px 2px 2px #ccc
 		.pic-news
+			width 340px
 			.title
 				border-bottom 2px solid #cdcdcd
 				.item
