@@ -5,8 +5,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="renderer" content="webkit">
 	<title>document</title>
+	<link rel="stylesheet" href="css/idangerous.swiper2.7.6.css">
 	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/public.css" />
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" href="css/ie.css">
+	<![endif]-->
 </head>
 <body class="taobao-1-27">
 	<div class="taobao-1-27">
@@ -590,6 +594,10 @@
 									<li><a href="#">李克强对全国安全生产电视电话会议作出重要批示</a></li>
 									<li><a href="#">人民日报：让思想之光引领世界前行之路</a></li>
 									<li><a href="#">人民日报：宪法修改必须依法按程序进行</a></li>
+									<li><a href="#">李克强：政府工作报告要争取凝聚全社会最大公约数</a></li>
+									<li><a href="#">李克强对全国安全生产电视电话会议作出重要批示</a></li>
+									<li><a href="#">人民日报：让思想之光引领世界前行之路</a></li>
+									<li><a href="#">人民日报：宪法修改必须依法按程序进行</a></li>
 								</ul>
 							</div>
 						</div>
@@ -664,16 +672,10 @@
 		<p>巫山县巫峡镇净坛二路218号 邮编：404700 电话：023-57657125</p>
 	</div>
 	<script src="js/jquery-1.12.4.min.js"></script>
-	<script src="js/swiper-3.3.1.jquery.min.js"></script>
+	<script src="js/idangerous.swiper2.7.6.min.js"></script>
 	<script>
 
-		var mySwiper = new Swiper ('.swiper-container', {
-
-			loop: true,
-			pagination: '.swiper-pagination',
-			
-		})     
-		$('*[data-js-tabs]').children().on('click', function() {
+		$('*[data-js-tabs]').children().on('mouseover', function() {
 			var tabs_obj = $(this).parent().attr('data-js-tabs');
 			$(tabs_obj).children().eq($(this).index()).show().siblings().hide();
 			$(this).addClass('active').siblings().removeClass('active');
@@ -690,7 +692,17 @@
 				$($(el).attr('data-js-tabs')).children().eq(0).show().siblings().hide();;
 			}
 		});
+		// var mySwiper = new Swiper ('.swiper-container', {
 
+		// 	loop: true,
+		// 	pagination: '.swiper-pagination',
+			
+		// })     
+var mySwiper = $('.swiper-container').swiper({
+    loop: 'true',
+    pagination: '.swiper-pagination',
+    paginationClickable :'true'
+  });
 	</script>
 </body>
 </html>

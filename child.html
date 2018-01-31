@@ -6,6 +6,9 @@
 	<meta name="renderer" content="webkit">
 	<title>document</title>
 	<link rel="stylesheet" href="css/public.css" />
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" href="css/ie.css">
+	<![endif]-->
 </head>
 <body class="taobao-1-27">
 	<div class="taobao-1-27">
@@ -52,7 +55,7 @@
 						<span>来源： 国家税务总局集中采购中心</span>
 					</div>
 					<div class="set-font-size">
-						【字体：<a href="#">大</a><a href="#">中</a><a href="#">小</a>】 <a href="#">打印本页</a>
+						【字体：<a href="javascript:;" class="big">大</a><a href="javascript:;" class="middle">中</a><a href="javascript:;" class="small">小</a>】 <a href="#">打印本页</a>
 					</div>
 					<div class="content-body">
 						<div class="h2">一、项目信息</div>
@@ -115,7 +118,9 @@
 				$($(el).attr('data-js-tabs')).children().eq(0).show().siblings().hide();;
 			}
 		});
-
+		$('.taobao-1-27 .main.child .child-content .set-font-size a').on('click', function() {
+			$('.taobao-1-27 .main.child .child-content .content-body').attr('class','content-body '+$(this).attr('class'))
+		});
 	</script>
 </body>
 </html>
